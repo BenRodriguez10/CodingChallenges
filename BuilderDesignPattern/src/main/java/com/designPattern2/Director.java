@@ -1,12 +1,11 @@
 package com.designPattern2;
 
 public class Director {
-    public void constructHouse(Builder builder) {
-        builder.setBuildingType(BuildingType.HOUSE);
-        builder.setNumberOfBedrooms(2);
+    public void constructBuilding(Builder builder) {
+
     }
 
-    public void constructFlat(Builder builder) {
+    public void constructBuilding2(Builder builder) {
         builder.setBuildingType(BuildingType.FLAT);
         builder.setNumberOfBedrooms(1);
         builder.setNumberOfBathrooms(1);

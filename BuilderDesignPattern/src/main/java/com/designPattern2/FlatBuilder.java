@@ -1,5 +1,16 @@
 package com.designPattern2;
 
+/**
+  Concrete builders implement steps defined in the common interface.
+ 
+  Unlike other creational patterns, Builder can construct unrelated products,
+  which don't have the common interface.
+ 
+  In this case we build a user manual for a car, using the same steps as we
+  built a car. This allows to produce manuals for specific car models,
+  configured with different features.
+*/
+
 public class FlatBuilder implements Builder {
     private BuildingType type;
     private int bedrooms;

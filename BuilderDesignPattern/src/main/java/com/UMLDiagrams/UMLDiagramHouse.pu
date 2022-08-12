@@ -1,7 +1,7 @@
 @startuml
 header House
-Client ..> HouseBuilder //Dependency
-Client ..> FlatBuilder //Dependency
+Client ..> HouseBuilder 
+Client ..> FlatBuilder 
 class Client{
     Director(director)
     HouseBuilder(builder)
