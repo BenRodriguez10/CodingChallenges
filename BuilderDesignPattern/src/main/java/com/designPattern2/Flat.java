@@ -8,7 +8,7 @@ public class Flat {
     private final boolean garden;
 
     public Flat(BuildingType buildingType, int bedrooms, int bathrooms, boolean garden) {
-        this.buildingType = buildingType;
+        this.buildingType = BuildingType.FLAT;
         this.bedrooms = bedrooms;
         this.bathrooms = bathrooms;
         this.garden = garden;

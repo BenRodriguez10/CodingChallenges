@@ -1,7 +1,6 @@
 package com.designPattern1;
 
-public class PhoneBuilder
-{
+public class PhoneBuilder {
     private String os;
     private int ram;
     private String processor;

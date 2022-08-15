@@ -5,10 +5,4 @@ public class Director {
 
     }
 
-    public void constructBuilding2(Builder builder) {
-        builder.setBuildingType(BuildingType.FLAT);
-        builder.setNumberOfBedrooms(1);
-        builder.setNumberOfBathrooms(1);
-        builder.setGarden(true);
-    }
 }
