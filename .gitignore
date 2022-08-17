@@ -8,8 +8,8 @@
 *.ctxt
 
 **/build
-**/.idea
-**/.gradle
+**/.idea/
+**/.gradle/
 .idea/
 .gradle/
 
