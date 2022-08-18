@@ -1,0 +1,29 @@
+@startuml
+header AbstractFactoryPattern
+
+interface Notification{
+    String notifyUser()
+}
+class EmailNotification{
+    String notifyUser()
+} 
+class TextNotification{
+    String notifyUser()
+} 
+EmailNotification ..> Notification
+TextNotification ..> Notification
+
+class NotificationFactory{
+    Notification createNotification()
+    new TextNotification()
+    new EmailNotification()
+}
+NotificationFactory ..> TextNotification
+NotificationFactory ..> EmailNotification
+
+class CreateNotification{
+    new NotificationFactory()
+    new Notification()
+}
+
+@enduml
