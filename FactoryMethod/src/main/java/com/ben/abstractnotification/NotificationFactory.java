@@ -4,8 +4,6 @@ public class NotificationFactory extends AbstractFactory {
     public Notification createNotification(String typeOfNotification)
     {
         //This is our factory class/method to instantiate the concrete class
-        if(typeOfNotification == null || typeOfNotification.isEmpty())
-            return null;
         switch (typeOfNotification){
             case "Text":
                 return new TextNotification();

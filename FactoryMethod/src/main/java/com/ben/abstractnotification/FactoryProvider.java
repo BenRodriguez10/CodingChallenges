@@ -1,7 +1,7 @@
 package com.ben.abstractnotification;
 
 public class FactoryProvider {
-    public static AbstractFactory getFactory(String choice){
+    public static AbstractFactory getFactory(String choice) throws Exception {
 
         if("Phone".equalsIgnoreCase(choice)){
             return new PhoneFactory();
@@ -9,7 +9,8 @@ public class FactoryProvider {
         else if("Notification".equalsIgnoreCase(choice)){
             return new NotificationFactory();
         }
-
-        return null;
+        else {
+            throw new Exception("Bad choice");
+        }
     }
 }

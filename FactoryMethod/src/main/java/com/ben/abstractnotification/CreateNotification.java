@@ -3,7 +3,7 @@ package com.ben.abstractnotification;
 import java.io.IOException;
 
 public class CreateNotification {
-    public static void main(String args[]) throws IOException {
+    public static void main(String args[]) throws Exception {
         
         System.out.println("Sending notification based off input");
 
