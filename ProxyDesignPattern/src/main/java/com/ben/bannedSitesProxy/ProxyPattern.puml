@@ -1,0 +1,56 @@
+@startuml
+header AbstractFactoryPattern
+
+interface Notification{
+    String notifyUser()
+}
+class EmailNotification{
+    String notifyUser()
+} 
+class TextNotification{
+    String notifyUser()
+} 
+EmailNotification ..> Notification
+TextNotification ..> Notification
+
+abstract class Phone{
+    String getVersion()
+}
+class ApplePhone{
+    String getVersion()
+} 
+class AndroidPhone{
+    String getVersion()
+} 
+AndroidPhone ..> Phone
+ApplePhone ..> Phone
+
+class NotificationFactory{
+    Notification createNotification(String typeOfNotification)
+    Phone createPhone(String typeOfPhone)
+}
+NotificationFactory ..> TextNotification
+NotificationFactory ..> EmailNotification
+
+class PhoneFactory{
+    Phone createPhone(String typeOfPhone)
+    Notification createNotification(String typeOfNotification)
+}
+PhoneFactory ..> ApplePhone
+PhoneFactory ..> AndroidPhone
+
+abstract class AbstractFactory{
+    abstract createNotification(String type)
+    abstract createPhone(String type)
+}
+
+AbstractFactory <-- NotificationFactory
+AbstractFactory <-- PhoneFactory
+
+class FactoryProvider{
+    AbstractFactory getFactory()
+}
+FactoryProvider --> AbstractFactory
+
+
+@enduml
