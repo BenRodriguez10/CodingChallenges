@@ -4,7 +4,7 @@ public class EmployeePayrollSystem implements PaymentSystem {
 
     private static EmployeePayrollSystem instance;
 
-    private EmployeePayrollSystem() {}
+    public EmployeePayrollSystem() {}
 
     public static EmployeePayrollSystem getInstance() {
         if (instance == null) {

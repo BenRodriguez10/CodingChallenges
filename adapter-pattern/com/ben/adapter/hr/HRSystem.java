@@ -7,7 +7,7 @@ public class HRSystem implements IHRSystem {
 
     private static HRSystem instance;
 
-    private HRSystem() {
+    public HRSystem() {
     }
 
     public static HRSystem getInstance() {

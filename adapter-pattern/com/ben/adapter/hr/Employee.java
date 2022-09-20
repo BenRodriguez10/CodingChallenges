@@ -1,6 +1,6 @@
 package com.ben.adapter.hr;
 
-class Employee implements IEmployee {
+public class Employee implements IEmployee {
 
     private final String firstName;
     private final String lastName;
