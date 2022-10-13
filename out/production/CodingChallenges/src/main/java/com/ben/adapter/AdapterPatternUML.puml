@@ -1,0 +1,19 @@
+@startuml
+header AdapterPattern
+
+class Client{
+}
+
+interface SpeedAdapter{
+      double speed()
+  }
+class SpeedAdapterImpl{
+    straightLineSpeed luxuryCar
+    double speed()
+}
+
+straightLineSpeed ..> SpeedAdapterImpl
+SpeedAdapterImpl ..> SpeedAdapter
+
+
+@enduml
